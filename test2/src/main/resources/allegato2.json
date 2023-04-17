@@ -1,0 +1,44 @@
+{
+    "HTTP_302": [
+        {
+            "crawlId": "102770207",
+            "total": 88,
+            "totalInt": 83,
+            "totalExt": 5
+        },
+        {
+            "crawlId": "213881318",
+            "total": 144,
+            "totalInt": 130,
+            "totalExt": 14
+        }
+    ],
+    "HTTP_NO": [
+        {
+            "crawlId": "102770207",
+            "total": 1490,
+            "totalInt": 1489,
+            "totalExt": 1
+        },
+        {
+            "crawlId": "213881318",
+            "total": 400,
+            "totalInt": 310,
+            "totalExt": 90
+        }
+    ],
+    "MIME_ALL": [
+        {
+            "crawlId": "102770207",
+            "total": 1965,
+            "totalInt": 1844,
+            "totalExt": 121
+        },
+        {
+            "crawlId": "213881318",
+            "total": 1000,
+            "totalInt": 951,
+            "totalExt": 49
+        }
+    ]
+}
