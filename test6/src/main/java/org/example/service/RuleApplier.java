@@ -10,8 +10,8 @@ public class RuleApplier {
     public static List<String> applyRule(List<Rule> rules, Document doc1) {
         List<String> page1 = new ArrayList<>(List.of(doc1.html().split("\\r?\\n")));
         System.out.println("Applying rule");
-
-
+        
+        //Per ogni regola presente nella lista delle regole applico la regola
         for(int i = 0 ; i < rules.size(); i++){
             Rule rule = rules.get(i);
             switch (rule.getOperation()){

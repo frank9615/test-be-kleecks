@@ -33,8 +33,10 @@ public class Main {
             rules.forEach(System.out::println);
         }
         //Return a json object
+        //Scrivo il risultato su un file json chiamato output.json
         JsonArray response = new Gson().toJsonTree(rules).getAsJsonArray();
 
+        
         FileWriter file = new FileWriter("output.json");
         Gson gson = new Gson();
         String jsonString = gson.toJson(response);

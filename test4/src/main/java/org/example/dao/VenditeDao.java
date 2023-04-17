@@ -16,7 +16,9 @@ public class VenditeDao {
     public VenditeDao(Connection conn) {
         this.conn = conn;
     }
-
+    /**
+     * Crea la tabella vendite se non esiste
+     */
     public void createTable() throws SQLException {
         final String sql = """
                  create table if not exists vendite
@@ -30,7 +32,10 @@ public class VenditeDao {
         stmt.execute(sql);
         stmt.close();
     }
-
+    /**
+     * Inserisce i dati nella tabella vendite 
+     * in maniera transazionale
+     */
     public void insertData() throws SQLException {
         List<Vendite> venditeList = Arrays.asList(
                 new Vendite("A", 2021, new BigDecimal(500)),
@@ -61,6 +66,10 @@ public class VenditeDao {
         conn.commit();
         conn.setAutoCommit(true);
     }
+    /**
+     * Seleziona i dati dalla tabella vendite
+     * utilizzando la stessa query del test 3
+     */
 
     public List<VenditeVariazione> selectData() throws SQLException {
         final String sql = """
@@ -89,6 +98,7 @@ public class VenditeDao {
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
         List<VenditeVariazione> venditeVariazioneList = new ArrayList<>();
+        //Per ogni risultato creo un oggetto VenditeVariazione e lo aggiungo alla lista
         while (rs.next()) {
             VenditeVariazione venditeVariazione = new VenditeVariazione();
             venditeVariazione.setUser(rs.getString("user"));

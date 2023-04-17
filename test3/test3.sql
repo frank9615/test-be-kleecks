@@ -1,3 +1,6 @@
+-- utilizzo coalesce per gestire il caso in cui non ci siano vendite per l'anno precedente
+-- se non ci sono vendite allora la variazione è uguale all'anno in corso (totale) - 0
+
 SELECT
     user,
     anno,
